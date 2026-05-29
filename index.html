@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Narrow Cub — Gospel T-Shirts | Wear The Word</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --teal: #0F6E56;
+      --teal-light: #1D9E75;
+      --teal-pale: #E1F5EE;
+      --teal-dark: #085041;
+      --black: #0e0e0e;
+      --white: #ffffff;
+      --off-white: #f7f7f5;
+      --gray: #888780;
+      --gray-light: #D3D1C7;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--black);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 4rem;
+      background: var(--black);
+      border-bottom: 1px solid #222;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-logo span { color: var(--teal-light); }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--gray-light);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--teal-light); }
+
+    .nav-cta {
+      background: var(--teal);
+      color: var(--white) !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 2px;
+    }
+
+    .nav-cta:hover { background: var(--teal-light); color: var(--white) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: var(--black);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding-top: 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -10%;
+      right: 30%;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: var(--teal-dark);
+      opacity: 0.18;
+      pointer-events: none;
+    }
+
+    .hero-text {
+      padding: 4rem 3rem 4rem 4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      margin-bottom: 1.5rem;
+      border-left: 3px solid var(--teal-light);
+      padding-left: 0.75rem;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.0;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--teal-light);
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: var(--gray-light);
+      line-height: 1.7;
+      max-width: 440px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--teal);
+      color: var(--white);
+      padding: 0.875rem 2rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover { background: var(--teal-light); transform: translateY(-1px); }
+
+    .btn-outline {
+      border: 1.5px solid #444;
+      color: var(--gray-light);
+      padding: 0.875rem 2rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+    }
+
+    .btn-outline:hover { border-color: var(--teal-light); color: var(--teal-light); }
+
+    .hero-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 4rem 4rem 2rem;
+      position: relative;
+    }
+
+    .tshirt-card {
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      border-radius: 4px;
+      width: 320px;
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .tshirt-svg {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 1.5rem;
+      display: block;
+    }
+
+    .tshirt-badge {
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      background: var(--teal);
+      color: var(--white);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border-radius: 2px;
+    }
+
+    .tshirt-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--white);
+      margin-bottom: 0.25rem;
+    }
+
+    .tshirt-price {
+      font-size: 0.9rem;
+      color: var(--teal-light);
+      font-weight: 500;
+    }
+
+    /* ── MARQUEE ── */
+    .marquee-bar {
+      background: var(--teal);
+      padding: 0.85rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee-track {
+      display: inline-block;
+      animation: marquee 22s linear infinite;
+    }
+
+    .marquee-track span {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin: 0 2.5rem;
+    }
+
+    .marquee-track span::before {
+      content: '✦';
+      margin-right: 2.5rem;
+      color: var(--teal-pale);
+      opacity: 0.7;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ── ABOUT STRIP ── */
+    .about-strip {
+      background: var(--off-white);
+      padding: 5rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-strip h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-strip h2 span { color: var(--teal); }
+
+    .about-strip p {
+      font-size: 1rem;
+      font-weight: 300;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .value-card {
+      background: var(--white);
+      border: 1px solid var(--gray-light);
+      border-radius: 4px;
+      padding: 1.25rem;
+      border-top: 3px solid var(--teal);
+    }
+
+    .value-card h3 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--teal-dark);
+      margin-bottom: 0.4rem;
+    }
+
+    .value-card p {
+      font-size: 0.875rem;
+      color: var(--gray);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* ── PRODUCTS ── */
+    .products {
+      padding: 6rem 4rem;
+      background: var(--white);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 700;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      border: 1px solid var(--gray-light);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(15,110,86,0.12);
+    }
+
+    .product-img {
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      position: relative;
+    }
+
+    .product-img.bg-teal { background: var(--teal-pale); }
+    .product-img.bg-dark { background: var(--black); }
+    .product-img.bg-white { background: var(--off-white); }
+
+    .product-verse {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      right: 12px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      font-style: italic;
+      color: var(--teal-dark);
+      background: rgba(255,255,255,0.88);
+      padding: 0.4rem 0.6rem;
+      border-radius: 2px;
+    }
+
+    .product-img.bg-dark .product-verse {
+      color: var(--teal-light);
+      background: rgba(0,0,0,0.7);
+    }
+
+    .product-info {
+      padding: 1.25rem;
+    }
+
+    .product-tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.4rem;
+    }
+
+    .product-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1rem;
+    }
+
+    .product-price {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    .btn-cart {
+      background: var(--teal);
+      color: var(--white);
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .btn-cart:hover { background: var(--teal-light); }
+
+    /* ── VERSE BANNER ── */
+    .verse-banner {
+      background: var(--black);
+      padding: 5rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .verse-banner::before {
+      content: '"';
+      position: absolute;
+      font-family: 'Playfair Display', serif;
+      font-size: 20rem;
+      color: var(--teal-dark);
+      opacity: 0.15;
+      top: -4rem;
+      left: 2rem;
+      line-height: 1;
+    }
+
+    .verse-banner blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      font-style: italic;
+      color: var(--white);
+      max-width: 780px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.4;
+      position: relative;
+      z-index: 1;
+    }
+
+    .verse-banner cite {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal-light);
+    }
+
+    /* ── HOW IT WORKS ── */
+    .how-it-works {
+      padding: 6rem 4rem;
+      background: var(--off-white);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .step {
+      text-align: center;
+    }
+
+    .step-num {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: var(--white);
+      font-size: 1.1rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+
+    .step h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .step p {
+      font-size: 0.875rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials {
+      padding: 6rem 4rem;
+      background: var(--white);
+    }
+
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .testi-card {
+      background: var(--off-white);
+      border-radius: 4px;
+      padding: 1.75rem;
+      border-left: 4px solid var(--teal);
+    }
+
+    .testi-stars {
+      color: var(--teal);
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.1em;
+    }
+
+    .testi-text {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 1.25rem;
+      font-style: italic;
+    }
+
+    .testi-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--teal-dark);
+    }
+
+    /* ── NEWSLETTER ── */
+    .newsletter {
+      background: var(--teal-dark);
+      padding: 4.5rem 4rem;
+      text-align: center;
+    }
+
+    .newsletter h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .newsletter p {
+      font-size: 1rem;
+      color: var(--teal-pale);
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 0.875rem 1.25rem;
+      font-size: 0.9rem;
+      border: none;
+      border-radius: 2px 0 0 2px;
+      font-family: 'DM Sans', sans-serif;
+      outline: none;
+    }
+
+    .newsletter-form button {
+      background: var(--black);
+      color: var(--white);
+      border: none;
+      padding: 0.875rem 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      border-radius: 0 2px 2px 0;
+      font-family: 'DM Sans', sans-serif;
+      transition: background 0.2s;
+    }
+
+    .newsletter-form button:hover { background: #222; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--black);
+      padding: 3.5rem 4rem 2rem;
+      color: var(--gray-light);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid #222;
+    }
+
+    .footer-brand .nav-logo {
+      display: inline-block;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.875rem;
+      line-height: 1.7;
+      color: var(--gray);
+      max-width: 240px;
+    }
+
+    footer h4 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+
+    footer ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    footer ul a {
+      color: var(--gray);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+
+    footer ul a:hover { color: var(--teal-light); }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-bottom p {
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
+
+    .footer-bottom a {
+      color: var(--teal-light);
+      text-decoration: none;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .hero-text { padding: 2rem 1.5rem; }
+      .about-strip { grid-template-columns: 1fr; padding: 3rem 1.5rem; }
+      .products { padding: 4rem 1.5rem; }
+      .products-grid { grid-template-columns: 1fr 1fr; }
+      .steps { grid-template-columns: 1fr 1fr; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .how-it-works { padding: 4rem 1.5rem; }
+      .testimonials { padding: 4rem 1.5rem; }
+      .verse-banner { padding: 4rem 1.5rem; }
+      .newsletter { padding: 3rem 1.5rem; }
+      footer { padding: 2.5rem 1.5rem 1.5rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+
+    @media (max-width: 560px) {
+      .products-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+      .newsletter-form { flex-direction: column; }
+      .newsletter-form input { border-radius: 2px; }
+      .newsletter-form button { border-radius: 2px; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">TheNarrow<span>Cub</span></a>
+    <ul class="nav-links">
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#about">Our Story</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <span class="hero-eyebrow">Faith-Forward Apparel</span>
+      <h1>Wear the<br><em>Word.</em></h1>
+      <p class="hero-sub">The Narrow Cub crafts premium T-shirts that boldly declare your faith. Every thread, every stitch — a conversation starter for the Kingdom.</p>
+      <div class="hero-buttons">
+        <a href="#shop" class="btn-primary">Shop the Collection</a>
+        <a href="#about" class="btn-outline">Our Story</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="tshirt-card">
+        <span class="tshirt-badge">New Drop</span>
+        <svg class="tshirt-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- T-shirt shape -->
+          <path d="M40 55 L20 90 L50 100 L50 170 L150 170 L150 100 L180 90 L160 55 L130 40 Q100 65 70 40 Z"
+            fill="#1D9E75" stroke="#0F6E56" stroke-width="2"/>
+          <!-- Cross on shirt -->
+          <rect x="92" y="90" width="16" height="50" rx="2" fill="white" opacity="0.92"/>
+          <rect x="78" y="104" width="44" height="16" rx="2" fill="white" opacity="0.92"/>
+        </svg>
+        <div class="tshirt-label">Faith &amp; Light Tee</div>
+        <div class="tshirt-price">From $29.99</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-bar" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Free Shipping Over $60</span>
+      <span>100% Cotton</span>
+      <span>Faith-Inspired Designs</span>
+      <span>Custom Orders Welcome</span>
+      <span>Ships Worldwide</span>
+      <span>New Drops Every Month</span>
+      <span>Free Shipping Over $60</span>
+      <span>100% Cotton</span>
+      <span>Faith-Inspired Designs</span>
+      <span>Custom Orders Welcome</span>
+      <span>Ships Worldwide</span>
+      <span>New Drops Every Month</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about-strip" id="about">
+    <div>
+      <h2>Apparel with a <span>Purpose</span></h2>
+      <p>The Narrow Cub was born from a simple belief: your wardrobe can be your witness. We design wearable scripture and faith-inspired art for believers who want their everyday style to reflect their eternal values.</p>
+      <p>Every purchase helps fund outreach programs and community ministry. When you wear The Narrow Cub, you're not just wearing a shirt — you're joining a movement.</p>
+      <br/>
+      <a href="#shop" class="btn-primary">Shop Now</a>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <h3>Premium Quality</h3>
+        <p>100% heavyweight cotton, pre-shrunk and built to last through every season.</p>
+      </div>
+      <div class="value-card">
+        <h3>Faith Forward</h3>
+        <p>Every design carries scripture, truth, and a message worth sharing.</p>
+      </div>
+      <div class="value-card">
+        <h3>Give Back</h3>
+        <p>10% of every sale goes directly to community outreach and ministry.</p>
+      </div>
+      <div class="value-card">
+        <h3>Custom Orders</h3>
+        <p>Want your church name, camp verse, or ministry on a tee? We do that.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="shop">
+    <div class="section-header">
+      <span class="section-eyebrow">The Collection</span>
+      <h2>Featured Tees</h2>
+    </div>
+
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-img bg-teal">
+          <svg width="120" height="120" viewBox="0 0 200 200" fill="none">
+            <path d="M40 55 L20 90 L50 100 L50 170 L150 170 L150 100 L180 90 L160 55 L130 40 Q100 65 70 40 Z" fill="#0F6E56" stroke="#085041" stroke-width="2"/>
+            <rect x="92" y="88" width="16" height="52" rx="2" fill="white"/>
+            <rect x="76" y="102" width="48" height="16" rx="2" fill="white"/>
+          </svg>
+          <div class="product-verse">"I can do all things through Christ" — Phil. 4:13</div>
+        </div>
+        <div class="product-info">
+          <div class="product-tag">Bestseller</div>
+          <div class="product-name">The Cross Classic</div>
+          <div class="product-footer">
+            <span class="product-price">$29.99</span>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img bg-dark">
+          <svg width="120" height="120" viewBox="0 0 200 200" fill="none">
+            <path d="M40 55 L20 90 L50 100 L50 170 L150 170 L150 100 L180 90 L160 55 L130 40 Q100 65 70 40 Z" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
+            <text x="100" y="125" text-anchor="middle" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="#1D9E75">GRACE</text>
+            <text x="100" y="148" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#5DCAA5">John 3:16</text>
+          </svg>
+          <div class="product-verse">"For God so loved the world…" — John 3:16</div>
+        </div>
+        <div class="product-info">
+          <div class="product-tag">New Arrival</div>
+          <div class="product-name">Grace Midnight Tee</div>
+          <div class="product-footer">
+            <span class="product-price">$32.99</span>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img bg-white">
+          <svg width="120" height="120" viewBox="0 0 200 200" fill="none">
+            <path d="M40 55 L20 90 L50 100 L50 170 L150 170 L150 100 L180 90 L160 55 L130 40 Q100 65 70 40 Z" fill="#E1F5EE" stroke="#9FE1CB" stroke-width="2"/>
+            <text x="100" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#0F6E56">BE STILL</text>
+            <text x="100" y="135" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#085041">& KNOW</text>
+            <text x="100" y="152" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#5DCAA5">Psalm 46:10</text>
+          </svg>
+          <div class="product-verse">"Be still, and know that I am God" — Psalm 46:10</div>
+        </div>
+        <div class="product-info">
+          <div class="product-tag">Clean &amp; Minimal</div>
+          <div class="product-name">Be Still Tee</div>
+          <div class="product-footer">
+            <span class="product-price">$27.99</span>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VERSE BANNER -->
+  <section class="verse-banner">
+    <blockquote>
+      "Let your light shine before others, that they may see your good deeds and glorify your Father in heaven."
+    </blockquote>
+    <cite>Matthew 5:16</cite>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="how">
+    <div class="section-header">
+      <span class="section-eyebrow">Simple Process</span>
+      <h2>How It Works</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Browse the Collection</h3>
+        <p>Explore our faith-inspired designs — from bold scripture prints to subtle cross graphics.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Pick Your Style</h3>
+        <p>Choose your size, color, and design. We carry XS to 4XL in every cut.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>We Print & Ship</h3>
+        <p>Your order is printed on demand and shipped within 3–5 business days.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Wear &amp; Witness</h3>
+        <p>Receive your tee, put it on, and let the conversations begin.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="section-header">
+      <span class="section-eyebrow">Community Love</span>
+      <h2>What People Are Saying</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"I wore my Narrow Cub tee to the grocery store and had three incredible conversations about faith. It's more than a shirt — it's a ministry tool."</p>
+        <div class="testi-name">— Marcus T., Atlanta GA</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Ordered custom tees for our youth group. The quality was incredible, turnaround was fast, and every kid in the group loves wearing them."</p>
+        <div class="testi-name">— Pastor Dana L., Chicago IL</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Finally a Christian apparel brand that doesn't look outdated. The Narrow Cub is fresh, bold, and genuinely high quality. I've ordered five times now."</p>
+        <div class="testi-name">— Priya M., Houston TX</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter" id="contact">
+    <h2>Stay in the Word</h2>
+    <p>New drops, exclusive deals, and devotional inspiration — right to your inbox.</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="your@email.com" />
+      <button type="button">Subscribe</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">TheNarrow<span>Cub</span></a>
+        <p>Faith-forward apparel for believers who aren't afraid to let the world know who they serve.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#shop">New Arrivals</a></li>
+          <li><a href="#shop">Bestsellers</a></li>
+          <li><a href="#shop">Scripture Tees</a></li>
+          <li><a href="#shop">Custom Orders</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#">Give Back</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Sizing Guide</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 TheNarrowCub. All rights reserved. Website by <a href="https://thenrrowcub.com" target="_blank">thenrrowcub.com</a></p>
+      <p>Privacy Policy · Terms of Service</p>
+    </div>
+  </footer>
+
+</body>
+</html>
